@@ -1,4 +1,5 @@
-type MyPick<T, K extends keyof T> = {
+{
+    type MyPick<T, K extends keyof T> = {
     [P in K] : T[P];
 }
 
@@ -14,3 +15,4 @@ interface Todo {
       title: 'Clean room',
       completed: false,
   }
+}
