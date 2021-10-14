@@ -10,7 +10,8 @@
       "noUnusedLocals": false,
       "noUnusedParameters": true,
       "noImplicitReturns": true,
-      "allowJs": true
+      "allowJs": true,
+      "noImplicitAny": true,
     },
     "exclude": ["node_modules", "dist"]
   }

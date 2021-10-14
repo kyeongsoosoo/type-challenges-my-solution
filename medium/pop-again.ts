@@ -7,4 +7,5 @@
     type re1 = MyPop<arr1> // expected to be ['a', 'b', 'c']
     type re2 = MyPop<arr2> // expected to be [3, 2]
 
+    const a = []
 }
