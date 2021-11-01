@@ -1,4 +1,5 @@
 {
+    //다시 풀어보기
     type FlattenDepth<T extends any[], C extends number = 1, U extends any[] = []> = 
         T extends [infer F,...infer R]
             ? F extends any[]
