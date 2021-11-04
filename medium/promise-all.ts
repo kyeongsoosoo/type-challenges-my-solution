@@ -16,3 +16,7 @@
     // expected to be `Promise<[number, number, string]>`
     const p = Promise.all([promise1, promise2, promise3] as const)
     const z = PromiseAll([promise1, promise2, promise3] as const)
+
+    type n = [1,2,3]
+
+    
