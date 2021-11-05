@@ -1,0 +1,26 @@
+{
+    type LookUpableObject = {
+        type: string
+    }
+
+    type LookUp<O, T> = 
+        O extends LookUpableObject 
+            ? O['type'] extends T
+                ? O
+                : never
+            : never
+            
+            interface Cat {
+                type: 'cat'
+                breeds: 'Abyssinian' | 'Shorthair' | 'Curl' | 'Bengal'
+              }
+              
+              interface Dog {
+                type: 'dog'
+                breeds: 'Hound' | 'Brittany' | 'Bulldog' | 'Boxer'
+                color: 'brown' | 'white' | 'black'
+              }
+              
+              type MyDogType = LookUp<Cat | Dog, 'dog'> // expected to be `Dog`
+              
+}
