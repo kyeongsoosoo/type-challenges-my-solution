@@ -1,9 +1,8 @@
 {
-    type MyKebabCase<S extends string> = S extends `${infer F}${infer R}`
-        ? R extends Uncapitalize<R>
-            ? Uncapitalize<`${F}${MyKebabCase<R>}`>
-            : Uncapitalize<`${F}-${MyKebabCase<R>}`>
+    type KebabCase<S extends string> = 
+    S extends `${infer First}${infer Rest}`
+        ? Rest extends Uncapitalize<Rest>
+            ? `${Uncapitalize<First>}${KebabCase<Rest>}`
+            : `${Uncapitalize<First>}-${KebabCase<Rest>}`
         : S
-
-    const a: MyKebabCase<'FooBarBaz'>
 }
